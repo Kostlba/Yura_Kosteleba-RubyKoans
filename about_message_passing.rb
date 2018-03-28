@@ -26,6 +26,9 @@ class AboutMessagePassing < Neo::Koan
     assert mc.send("caught?")
     assert mc.send("caught" + "?")    # What do you need to add to the first string?
     assert mc.send("CAUGHT?".downcase)      # What would you need to do to the string?
+
+    #my test
+    assert mc.send("cau" + "ght?")
   end
 
   def test_send_with_underscores_will_also_send_messages

@@ -4,6 +4,9 @@ class AboutStrings < Neo::Koan
   def test_double_quoted_strings_are_strings
     string = "Hello, World"
     assert_equal true, string.is_a?(String)
+
+    #my test
+    assert_equal true, string.is_a?(Object)
   end
 
   def test_single_quoted_strings_are_also_strings
@@ -58,6 +61,12 @@ EOS
   def test_plus_will_concatenate_two_strings
     string = "Hello, " + "World"
     assert_equal "Hello, World", string
+
+    # my test
+    assert_equal 12, string.length
+    assert_equal 1, string.lines.count
+    assert_equal "H", string[0,1]
+
   end
 
   def test_plus_concatenation_will_leave_the_original_strings_unmodified
@@ -185,6 +194,9 @@ EOS
   def test_strings_can_be_joined
     words = ["Now", "is", "the", "time"]
     assert_equal "Now is the time", words.join(" ")
+
+    # my test
+    assert_equal "Now-is-the-time", words.join("-")
   end
 
   def test_strings_are_unique_objects

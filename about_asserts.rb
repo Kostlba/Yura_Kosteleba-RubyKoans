@@ -25,6 +25,14 @@ class AboutAsserts < Neo::Koan
     assert expected_value == actual_value
   end
 
+   def test_not_increment
+    i=0
+    i++1
+    assert_equal 0,i
+    i+=1
+    assert_equal 1,i;
+end
+
   # Some ways of asserting equality are better than others.
   def test_a_better_way_of_asserting_equality
     expected_value = 2

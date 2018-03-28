@@ -5,6 +5,10 @@ class AboutSymbols < Neo::Koan
 
     symbol = :ruby
     assert_equal true, symbol.is_a?(Symbol)
+
+     # my test
+    me = :yura
+    assert_equal me.to_s, "yura"
   end
 
   def test_symbols_can_be_compared
